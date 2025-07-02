@@ -22,6 +22,6 @@ bazel test //test:binary_tree_test \
   --spawn_strategy=local
 
 llvm-profdata merge -sparse test.profraw -o test.profdata
-llvm-cov show ./bazel-bin/test/binary_tree_test --instr-profile=test.profdata -format=html -output-dir=coverage_html
+llvm-cov show ../bazel-bin/test/binary_tree_test --instr-profile=test.profdata -format=html -output-dir=coverage_html
 
 echo -e "${GREEN}覆盖率测试完成，结果已保存到 coverage_html/index.html 目录下${NC}"
