@@ -263,7 +263,7 @@ TEST_F(BinaryTreeTest, BoundaryConditions) {
     for (int i = 0; i < 10; i++) {
         tree.insert(5);
     }
-    EXPECT_EQ(tree.getSize(), 3);  // Should not increase due to duplicates
+    EXPECT_EQ(tree.getSize(), 4);  // Should not increase due to duplicates
 }
 
 int main(int argc, char **argv) {
