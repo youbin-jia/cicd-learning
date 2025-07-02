@@ -14,7 +14,7 @@ bazel clean --expunge
 
 # 运行测试并生成覆盖率数据
 echo -e "${YELLOW}运行测试并生成覆盖率数据...${NC}"
-bazel coverage //test:binary_tree_test --combined_report=lcov --test_output=all
+bazel coverage //test:binary_tree_test --combined_report=lcov --noenable_bzlmod --enable_workspace --test_output=all
 
 # 检查测试是否成功
 if [ $? -ne 0 ]; then

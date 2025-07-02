@@ -5,6 +5,6 @@ cc_test(
         "//src:binary_tree",
         "@com_google_googletest//:gtest_main",
     ],
-    copts = ["-fprofile-arcs", "-ftest-coverage"],
-    linkopts = ["-lgcov"],
-) 
+    copts = ["-fprofile-instr-generate", "-fcoverage-mapping"],
+    linkopts = ["-fprofile-instr-generate"],  # 新增这一行
+)

@@ -3,5 +3,5 @@ cc_library(
     srcs = ["binary_tree.h"],
     hdrs = ["binary_tree.h"],
     visibility = ["//visibility:public"],
-    copts = ["-fprofile-arcs", "-ftest-coverage"],
+    copts = ["-fprofile-instr-generate", "-fcoverage-mapping"],
 ) 
